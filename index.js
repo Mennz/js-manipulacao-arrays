@@ -25,3 +25,15 @@ console.log("valor total em estoque:", valorTotalEstoque);
 const somaNotas = alunos.reduce((soma, a) => soma + a.nota, 0);
 const mediaNotas = somaNotas / alunos.length;
 console.log("media das notas:", mediaNotas.toFixed(2));
+
+const primeiroReprovado = alunos.find((a) => a.nota < 6);
+console.log("primeiro reprovado:", primeiroReprovado);
+
+const primeiroMovel = produtos.find((p) => p.categoria === "movel");
+console.log("primeiro movel:", primeiroMovel);
+
+const temReprovado = alunos.some((a) => a.nota < 6);
+console.log("tem aluno reprovado?", temReprovado);
+
+const todosEmEstoque = produtos.every((p) => p.estoque > 0);
+console.log("todos os produtos tem estoque?", todosEmEstoque);
