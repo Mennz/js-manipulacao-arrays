@@ -15,3 +15,13 @@ console.log("aprovados:", aprovados);
 
 const estoqueBaixo = produtos.filter((p) => p.estoque < 5);
 console.log("estoque baixo:", estoqueBaixo);
+
+const valorTotalEstoque = produtos.reduce(
+  (total, p) => total + p.preco * p.estoque,
+  0
+);
+console.log("valor total em estoque:", valorTotalEstoque);
+
+const somaNotas = alunos.reduce((soma, a) => soma + a.nota, 0);
+const mediaNotas = somaNotas / alunos.length;
+console.log("media das notas:", mediaNotas.toFixed(2));
