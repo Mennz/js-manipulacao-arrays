@@ -37,3 +37,10 @@ console.log("tem aluno reprovado?", temReprovado);
 
 const todosEmEstoque = produtos.every((p) => p.estoque > 0);
 console.log("todos os produtos tem estoque?", todosEmEstoque);
+
+// sort muda o array original, por isso o spread pra copiar antes
+const alunosPorNota = [...alunos].sort((a, b) => b.nota - a.nota);
+console.log("alunos por nota, do maior pro menor:", alunosPorNota);
+
+const produtosPorPreco = [...produtos].sort((a, b) => a.preco - b.preco);
+console.log("produtos por preco, do menor pro maior:", produtosPorPreco);
